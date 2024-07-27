@@ -17,7 +17,7 @@ public class App {
 
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(7);
 
-        Future<String> task1Future = executorService.submit(new Task1Callable(teamResultList, 2));
+        Future<String> task1Future = executorService.submit(new Task1Callable(teamResultList, 4));
         Future<List<TeamResult>> task3Future = executorService.submit(new Task3Callable(teamResultList));
 
         System.out.println("Task 1");

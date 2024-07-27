@@ -7,8 +7,7 @@ public class Task1Callable implements Callable<String> {
     private final List<TeamResult> teamResultList;
     private final int precision;
 
-    public Task1Callable(List<TeamResult> teamResultList, int precision)
-    {
+    public Task1Callable(List<TeamResult> teamResultList, int precision) {
 
         this.teamResultList = teamResultList;
         this.precision = precision;
@@ -21,6 +20,7 @@ public class Task1Callable implements Callable<String> {
                 .toList();
         double percentage = filterTeamResults.size() * 100 / (double) teamResultList.size();
 
-        return "Percentage of those countries whose rank is greater than their rank_by_total: "+percentage+"%";
+        var message = "Percentage of those countries whose Gold Rank is greater than their Total Rank : %." + precision + "f%%";
+        return String.format(message, percentage);
     }
 }
