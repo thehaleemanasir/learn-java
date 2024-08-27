@@ -4,9 +4,6 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Task2Runnable implements Runnable {
-    int runTime = 5;
-    private static final int SLEEP_TIME = 5;
-
     private final List<TeamResult> teamResultList;
 
     public Task2Runnable(List<TeamResult> teamResultList) {

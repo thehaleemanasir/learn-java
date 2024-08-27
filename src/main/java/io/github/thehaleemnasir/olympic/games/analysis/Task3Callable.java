@@ -7,13 +7,13 @@ import java.util.concurrent.Callable;
 
 public class Task3Callable implements Callable<List<TeamResult>> {
 
-    final private List<TeamResult> teamResultList;
+    private final List<TeamResult> teamResultList;
 
-    public Task3Callable(final List<TeamResult> teamResultList)
-    {
+    public Task3Callable(final List<TeamResult> teamResultList) {
         this.teamResultList = teamResultList;
 
     }
+
     @Override
     public List<TeamResult> call() throws Exception {
         return teamResultList.stream()
